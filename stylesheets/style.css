@@ -1,10 +1,10 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-	font-size: 62.5%
+  font-size: 62.5%
 }
 
 body {
@@ -16,11 +16,11 @@ body {
 }
 
 input {
-	width: 400px;
-	padding: 8px 5px;
+  width: 400px;
+  padding: 8px 5px;
 }
 
 button {
-	width: 100px;
-	padding: 8px 5px;
+  width: 100px;
+  padding: 8px 5px;
 }
