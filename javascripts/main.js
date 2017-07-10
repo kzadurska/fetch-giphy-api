@@ -8,7 +8,7 @@ class GiphySearch {
 	}
 
 	constructor() {
-		this.listen = this.listen.bind(this)
+		// this.listen = this.listen.bind(this)
 	}
 
 	listen() {
@@ -24,11 +24,11 @@ class GiphySearch {
 		.then(function(response) {
 			if(response.ok) {
 				return response.json().then(function(json) {
-				    for(let i = 0; i < json.data.length; i++) {
-				      	const listItem = document.createElement('li')
-				      	listItem.innerHTML = '<video><source src="'+json.data[i].images.fixed_width.mp4+'" type="video/mp4"></video>' 
-				      	GiphySearch.resultsList().appendChild(listItem)
-				    }
+			    for (const gif of json.data) {
+			    	const listItem = document.createElement('li')
+			    	listItem.innerHTML = '<video><source src="'+gif.images.fixed_width.mp4+'" type="video/mp4"></video>' 
+			      GiphySearch.resultsList().appendChild(listItem)
+			    }
 				})
 			} else {
 				const responseMessage = document.createElement('p')
